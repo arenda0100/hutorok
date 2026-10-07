@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Плавная прокрутка по ссылкам меню
+// Плавная прокрутка
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
@@ -25,7 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      const offset = 70;
+      const offset = 80;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -63,7 +63,7 @@ document.addEventListener('click', (e) => {
 // =====================================
 // ОТПРАВКА ЗАЯВКИ В TELEGRAM
 // =====================================
-// Позже вставим токен бота и chat_id арендодателя
+// Сюда вставьте токен бота и Chat ID арендодателя
 const TELEGRAM_BOT_TOKEN = 'ВСТАВЬТЕ_СЮДА_ТОКЕН';
 const TELEGRAM_CHAT_ID = 'ВСТАВЬТЕ_СЮДА_CHAT_ID';
 
@@ -80,10 +80,9 @@ async function sendToTelegram(event) {
   const phone = phoneEl.value.trim();
   const comment = commentEl.value.trim();
 
-  // Если токен не задан — показываем заглушку
   if (TELEGRAM_BOT_TOKEN === 'ВСТАВЬТЕ_СЮДА_ТОКЕН') {
     closeModal();
-    alert('Спасибо! Заявка отправлена. Мы свяжемся с вами.');
+    alert('Спасибо! Заявка отправлена.');
     return;
   }
 
@@ -109,17 +108,17 @@ async function sendToTelegram(event) {
       phoneEl.value = '';
       commentEl.value = '';
       setTimeout(() => {
-        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами.');
+        alert('Спасибо! Ваша заявка отправлена.');
       }, 200);
     } else {
-      alert('Ошибка отправки. Пожалуйста, позвоните: +375 29 796-82-48');
+      alert('Ошибка отправки. Позвоните: +375 29 796-82-48');
     }
   } catch (error) {
     alert('Ошибка соединения. Позвоните: +375 29 796-82-48');
   }
 }
 
-// Анимация появления карточек
+// Анимация появления
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
