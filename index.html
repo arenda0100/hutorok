@@ -21,6 +21,7 @@
     <a href="#about">О нас</a>
     <a href="#gallery">Галерея</a>
     <a href="#houses">Проживание</a>
+    <a href="#water">На воде</a>
     <a href="#prices">Цены</a>
     <a href="#rules">Условия</a>
   </nav>
@@ -155,39 +156,85 @@
   </div>
   <div class="houses-grid">
     <div class="house-card">
-      <div class="house-icon">🏡</div>
-      <div class="house-num">01</div>
-      <h3>Первый дом</h3>
-      <p>Для компании до 10 человек — уютный дом с печью и большим столом.</p>
-      <div class="house-price">500 руб / сутки</div>
+      <div class="house-img">
+        <img src="images/house-1.jpg" alt="Первый дом" loading="lazy">
+      </div>
+      <div class="house-body">
+        <div class="house-num">01</div>
+        <h3>Первый дом</h3>
+        <p>Для компании до 10 человек — уютный дом с печью и большим столом.</p>
+        <div class="house-price">500 руб / сутки</div>
+      </div>
     </div>
     <div class="house-card">
-      <div class="house-icon">🏠</div>
-      <div class="house-num">02</div>
-      <h3>Второй дом</h3>
-      <p>Дом для 14 человек — просторный зал, камин, всё для больших праздников.</p>
-      <div class="house-price">550 руб / сутки</div>
+      <div class="house-img">
+        <img src="images/house-2.jpg" alt="Второй дом" loading="lazy">
+      </div>
+      <div class="house-body">
+        <div class="house-num">02</div>
+        <h3>Второй дом</h3>
+        <p>Дом для 14 человек — просторный зал, камин, всё для больших праздников.</p>
+        <div class="house-price">550 руб / сутки</div>
+      </div>
     </div>
     <div class="house-card">
-      <div class="house-icon">🛏️</div>
-      <div class="house-num">03</div>
-      <h3>Комната для двоих</h3>
-      <p>Уютный вариант для пары — тихо, спокойно, всё под рукой.</p>
-      <div class="house-price">100 руб / сутки</div>
-    </div>
-    <div class="house-card featured">
-      <div class="house-icon">🌊</div>
-      <div class="house-num">04</div>
-      <h3>Домик на воде</h3>
-      <p>Романтика на берегу — прямо над водой, с видом на лес.</p>
-      <div class="house-price">200 руб / сутки</div>
+      <div class="house-img">
+        <img src="images/room-1.jpg" alt="Комната для двоих" loading="lazy">
+      </div>
+      <div class="house-body">
+        <div class="house-num">03</div>
+        <h3>Комната для двоих</h3>
+        <p>Уютный вариант для пары — тихо, спокойно, всё под рукой.</p>
+        <div class="house-price">100 руб / сутки</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" id="prices">
+<section class="section section-dark" id="water">
   <div class="section-head">
     <span class="section-num">04</span>
+    <h2>Домик на воде</h2>
+    <p>Романтика на берегу — прямо над водой</p>
+  </div>
+  <div class="water-layout">
+    <div class="water-gallery">
+      <div class="water-img big">
+        <img src="images/water-1.jpg" alt="Домик на воде" loading="lazy">
+      </div>
+      <div class="water-img">
+        <img src="images/water-2.jpg" alt="Домик на воде с лодкой" loading="lazy">
+      </div>
+    </div>
+    <div class="water-text">
+      <p class="water-lead">Отдельный домик прямо над водой — для тех, кто хочет тишины и романтики.</p>
+      <p>Просыпаетесь под шум воды, завтракаете на террасе с видом на лес, вечером — лодка, костёр и звёзды. Полное уединение вдали от города.</p>
+      <div class="water-features">
+        <div>
+          <span class="water-icon">🌊</span>
+          <span>Прямо на воде</span>
+        </div>
+        <div>
+          <span class="water-icon">🛏️</span>
+          <span>Для двоих</span>
+        </div>
+        <div>
+          <span class="water-icon">🚣</span>
+          <span>Лодка рядом</span>
+        </div>
+      </div>
+      <div class="water-price">
+        <span class="water-price-num">200</span>
+        <span class="water-price-cur">руб / сутки</span>
+      </div>
+      <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prices">
+  <div class="section-head">
+    <span class="section-num">05</span>
     <h2>Цены</h2>
     <p>Прозрачные условия без скрытых платежей</p>
   </div>
@@ -245,9 +292,9 @@
   </div>
 </section>
 
-<section class="section" id="rules">
+<section class="section section-dark" id="rules">
   <div class="section-head">
-    <span class="section-num">05</span>
+    <span class="section-num">06</span>
     <h2>Условия</h2>
     <p>Пожалуйста, ознакомьтесь перед бронированием</p>
   </div>
@@ -288,9 +335,9 @@
   </div>
 </section>
 
-<section class="section section-dark" id="contacts">
+<section class="section" id="contacts">
   <div class="section-head">
-    <span class="section-num">06</span>
+    <span class="section-num">07</span>
     <h2>Контакты</h2>
     <p>Свяжитесь с нами любым удобным способом</p>
   </div>
