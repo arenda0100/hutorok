@@ -60,9 +60,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// =====================================
 // ОТПРАВКА ЗАЯВКИ В TELEGRAM
-const TELEGRAM_BOT_TOKEN = 'ВСТАВЬТЕ_СЮДА_ТОКЕН';
-const TELEGRAM_CHAT_ID = 'ВСТАВЬТЕ_СЮДА_CHAT_ID';
+// =====================================
+const TELEGRAM_BOT_TOKEN = '8588992267:AAGiywgJMcdF5q7m3Fjeb00hkpqKL5ddmTU';
+const TELEGRAM_CHAT_ID = '1098084258';
 
 async function sendToTelegram(event) {
   if (event) event.preventDefault();
@@ -76,12 +78,6 @@ async function sendToTelegram(event) {
   const name = nameEl.value.trim();
   const phone = phoneEl.value.trim();
   const comment = commentEl.value.trim();
-
-  if (TELEGRAM_BOT_TOKEN === 'ВСТАВЬТЕ_СЮДА_ТОКЕН') {
-    closeModal();
-    alert('Спасибо! Заявка отправлена.');
-    return;
-  }
 
   const message = `🏡 НОВАЯ ЗАЯВКА С САЙТА «ХУТОРОК»
 
@@ -105,17 +101,17 @@ async function sendToTelegram(event) {
       phoneEl.value = '';
       commentEl.value = '';
       setTimeout(() => {
-        alert('Спасибо! Ваша заявка отправлена.');
+        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами.');
       }, 200);
     } else {
-      alert('Ошибка отправки. Позвоните: +375 29 796-82-48');
+      alert('Ошибка отправки. Пожалуйста, позвоните нам: +375 29 796-82-48');
     }
   } catch (error) {
-    alert('Ошибка соединения. Позвоните: +375 29 796-82-48');
+    alert('Ошибка соединения. Позвоните нам: +375 29 796-82-48');
   }
 }
 
-// Анимация появления
+// Анимация появления карточек
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
