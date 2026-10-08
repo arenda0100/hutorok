@@ -63,7 +63,7 @@ document.addEventListener('click', (e) => {
 // =====================================
 // ОТПРАВКА ЗАЯВКИ В TELEGRAM
 // =====================================
-const TELEGRAM_BOT_TOKEN = '8588992267:AAGiywgJMcdF5q7m3Fjeb00hkpqKL5ddmTU';
+const TELEGRAM_BOT_TOKEN = '8588992267:AAHTlbpjvS93-9i-nwVpvMHgWMb6IVbiUjQ';
 const TELEGRAM_CHAT_ID = '1098084258';
 
 async function sendToTelegram(event) {
