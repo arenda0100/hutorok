@@ -90,7 +90,7 @@ h1, h2, h3 {
 }
 .logo span { color: var(--ochre); }
 
-.nav { display: flex; gap: 26px; }
+.nav { display: flex; gap: 22px; }
 .nav a {
   color: var(--brown);
   text-decoration: none;
@@ -119,7 +119,7 @@ h1, h2, h3 {
   font-size: 14px;
   color: var(--brown);
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 10px 22px;
   border: 2px solid var(--ochre);
   border-radius: 100px;
   transition: all 0.3s;
@@ -542,7 +542,7 @@ h1, h2, h3 {
 /* ПРОЖИВАНИЕ */
 .houses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 28px;
 }
 .house-card {
@@ -572,6 +572,11 @@ h1, h2, h3 {
   box-shadow: 0 25px 55px rgba(47, 31, 18, 0.15);
 }
 .house-card:hover::before { transform: scaleX(1); }
+.house-card.featured {
+  background: linear-gradient(160deg, #fff9ec, #ffffff);
+  border-color: var(--ochre);
+}
+.house-card.featured::before { transform: scaleX(1); }
 
 .house-img {
   width: 100%;
@@ -627,12 +632,21 @@ h1, h2, h3 {
   border-top: 1px dashed rgba(192, 120, 48, 0.3);
 }
 
-/* ДОМИК НА ВОДЕ */
+/* ДОМИК НА ВОДЕ + ДОМ У ЛЕСА */
 .water-layout {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: center;
+}
+.water-layout-reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+.water-layout-reverse .water-text {
+  order: 1;
+}
+.water-layout-reverse .water-gallery {
+  order: 2;
 }
 .water-gallery {
   display: grid;
@@ -661,21 +675,27 @@ h1, h2, h3 {
 }
 .water-img:hover img { transform: scale(1.04); }
 
-.water-text { color: var(--cream); }
+.water-text { color: var(--brown); }
+.section-dark .water-text { color: var(--cream); }
+
 .water-lead {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 26px;
-  color: var(--ochre-2);
+  color: var(--ochre);
   line-height: 1.4;
   margin-bottom: 22px;
 }
+.section-dark .water-lead { color: var(--ochre-2); }
+
 .water-text > p {
   font-size: 16px;
-  color: rgba(250, 245, 234, 0.85);
+  color: var(--brown-light);
   line-height: 1.8;
   margin-bottom: 26px;
 }
+.section-dark .water-text > p { color: rgba(250, 245, 234, 0.85); }
+
 .water-features {
   display: flex;
   gap: 25px;
@@ -687,35 +707,41 @@ h1, h2, h3 {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: rgba(250, 245, 234, 0.9);
+  color: var(--brown-light);
 }
-.water-icon {
-  font-size: 20px;
-}
+.section-dark .water-features > div { color: rgba(250, 245, 234, 0.9); }
+
+.water-icon { font-size: 20px; }
+
 .water-price {
   display: flex;
   align-items: baseline;
   gap: 10px;
   margin-bottom: 28px;
   padding-top: 20px;
-  border-top: 1px solid rgba(232, 169, 72, 0.25);
+  border-top: 1px solid rgba(192, 120, 48, 0.25);
 }
+.section-dark .water-price { border-top-color: rgba(232, 169, 72, 0.25); }
+
 .water-price-num {
   font-family: 'Fraunces', serif;
   font-weight: 900;
   font-size: 60px;
   line-height: 1;
-  color: var(--ochre-2);
+  color: var(--ochre);
   letter-spacing: -2px;
 }
+.section-dark .water-price-num { color: var(--ochre-2); }
+
 .water-price-cur {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 600;
   font-size: 18px;
-  color: var(--ochre-2);
+  color: var(--ochre);
   opacity: 0.85;
 }
+.section-dark .water-price-cur { color: var(--ochre-2); }
 
 /* ЦЕНЫ */
 .prices {
@@ -727,8 +753,8 @@ h1, h2, h3 {
 }
 .price-card {
   position: relative;
-  background: var(--white);
-  border: 1px solid rgba(192, 120, 48, 0.18);
+  background: rgba(250, 245, 234, 0.06);
+  border: 1px solid rgba(232, 169, 72, 0.22);
   border-radius: 20px;
   padding: 45px 30px 35px;
   text-align: center;
@@ -737,12 +763,12 @@ h1, h2, h3 {
 }
 .price-card:hover {
   transform: translateY(-10px);
-  border-color: var(--ochre);
-  box-shadow: 0 30px 60px rgba(47, 31, 18, 0.12);
+  border-color: var(--ochre-2);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
 }
 .price-card.featured {
-  background: linear-gradient(160deg, #fff9ec, #ffffff);
-  border-color: var(--ochre);
+  background: linear-gradient(160deg, rgba(232, 169, 72, 0.15), rgba(250, 245, 234, 0.05));
+  border-color: var(--ochre-2);
 }
 .price-badge {
   position: absolute;
@@ -753,16 +779,16 @@ h1, h2, h3 {
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--ochre);
-  background: var(--cream);
+  color: var(--ochre-2);
+  background: var(--brown);
   padding: 6px 18px;
   border-radius: 100px;
-  border: 1px solid rgba(192, 120, 48, 0.4);
+  border: 1px solid rgba(232, 169, 72, 0.5);
   white-space: nowrap;
 }
 .price-card.featured .price-badge {
-  background: var(--ochre);
-  color: var(--white);
+  background: var(--ochre-2);
+  color: var(--brown);
 }
 .price-icon {
   font-size: 48px;
@@ -775,13 +801,13 @@ h1, h2, h3 {
   font-style: italic;
   font-weight: 400;
   font-size: 22px;
-  color: var(--brown);
+  color: var(--cream);
   margin-bottom: 22px;
 }
 .price-line {
   width: 55px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ochre), transparent);
+  background: linear-gradient(90deg, transparent, var(--ochre-2), transparent);
   margin: 0 auto 22px;
 }
 .price {
@@ -796,7 +822,7 @@ h1, h2, h3 {
   font-weight: 900;
   font-size: 60px;
   line-height: 1;
-  color: var(--ochre);
+  color: var(--ochre-2);
   letter-spacing: -2px;
 }
 .price-cur {
@@ -804,12 +830,12 @@ h1, h2, h3 {
   font-style: italic;
   font-weight: 600;
   font-size: 18px;
-  color: var(--ochre);
+  color: var(--ochre-2);
   opacity: 0.85;
 }
 .price-card p {
   font-size: 14px;
-  color: var(--gray);
+  color: rgba(250, 245, 234, 0.7);
   margin-top: 12px;
 }
 
@@ -821,15 +847,16 @@ h1, h2, h3 {
   margin-bottom: 45px;
 }
 .rule {
-  background: rgba(250, 245, 234, 0.06);
+  background: var(--white);
   padding: 32px 28px;
   border-radius: 18px;
-  border: 1px solid rgba(232, 169, 72, 0.2);
+  border: 1px solid rgba(192, 120, 48, 0.15);
   transition: all 0.4s;
 }
 .rule:hover {
-  border-color: var(--ochre-2);
+  border-color: var(--ochre);
   transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(47, 31, 18, 0.1);
 }
 .rule-icon {
   font-size: 30px;
@@ -840,28 +867,28 @@ h1, h2, h3 {
   font-family: 'Fraunces', serif;
   font-weight: 600;
   font-size: 16px;
-  color: var(--ochre-2);
+  color: var(--ochre);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .rule p {
   font-size: 15px;
-  color: rgba(250, 245, 234, 0.85);
+  color: var(--brown-light);
   line-height: 1.6;
 }
 .pay-note {
   text-align: center;
   padding: 28px;
-  background: rgba(232, 169, 72, 0.08);
+  background: rgba(192, 120, 48, 0.08);
   border-radius: 16px;
-  border: 1px solid rgba(232, 169, 72, 0.25);
+  border: 1px solid rgba(192, 120, 48, 0.2);
 }
 .pay-note p {
   font-size: 17px;
-  color: var(--cream);
+  color: var(--brown);
 }
-.pay-note strong { color: var(--ochre-2); }
+.pay-note strong { color: var(--ochre); }
 
 /* КОНТАКТЫ */
 .contacts {
@@ -872,34 +899,33 @@ h1, h2, h3 {
 }
 .contact {
   padding: 32px 28px;
-  background: var(--white);
+  background: rgba(250, 245, 234, 0.05);
   border-radius: 16px;
-  border: 1px solid rgba(192, 120, 48, 0.15);
+  border: 1px solid rgba(232, 169, 72, 0.2);
   transition: all 0.4s;
 }
 .contact:hover {
-  border-color: var(--ochre);
+  border-color: var(--ochre-2);
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(47, 31, 18, 0.08);
 }
 .contact-label {
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--ochre);
+  color: var(--ochre-2);
   display: block;
   margin-bottom: 14px;
-  font-weight: 600;
+  opacity: 0.9;
 }
 .contact a, .contact p {
   font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: 18px;
-  color: var(--brown);
+  color: var(--cream);
   text-decoration: none;
   line-height: 1.5;
 }
-.contact a:hover { color: var(--ochre); }
+.contact a:hover { color: var(--ochre-2); }
 
 /* ПОДВАЛ */
 .footer {
@@ -1033,7 +1059,10 @@ h1, h2, h3 {
   .gallery-wrapper { grid-template-columns: 50px 1fr 50px; gap: 15px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; gap: 15px; }
   .ribbon-track span { font-size: 11px; letter-spacing: 4px; padding: 20px 0; }
-  .water-layout { grid-template-columns: 1fr; gap: 40px; }
+  .water-layout,
+  .water-layout-reverse { grid-template-columns: 1fr; gap: 40px; }
+  .water-layout-reverse .water-text,
+  .water-layout-reverse .water-gallery { order: unset; }
 }
 
 @media (max-width: 768px) {
@@ -1052,7 +1081,7 @@ h1, h2, h3 {
     display: flex;
     order: 3;
     width: 100%;
-    gap: 18px;
+    gap: 16px;
     overflow-x: auto;
     padding: 8px 0 4px;
     -webkit-overflow-scrolling: touch;
@@ -1066,7 +1095,7 @@ h1, h2, h3 {
     flex-shrink: 0;
   }
 
-  .hero { padding: 160px 22px 60px; min-height: auto; }
+  .hero { padding: 170px 22px 60px; min-height: auto; }
   .hero-bg {
     background-position: center center;
     background-size: cover;
@@ -1089,7 +1118,7 @@ h1, h2, h3 {
 
   .about-image img { height: 300px; }
   .about-lead { font-size: 20px; }
-  .about-stats { gap: 30px; margin-top: 28px; }
+  about-stats { gap: 30px; margin-top: 28px; }
   .about-stats div strong { font-size: 32px; }
 
   .gallery-wrapper { grid-template-columns: 1fr; gap: 12px; }
@@ -1144,7 +1173,8 @@ h1, h2, h3 {
   .house-card h3 { font-size: 19px; }
   .house-price { font-size: 18px; }
 
-  .water-layout { grid-template-columns: 1fr; gap: 30px; }
+  .water-layout,
+  .water-layout-reverse { grid-template-columns: 1fr; gap: 30px; }
   .water-img.big { height: 240px; }
   .water-img:not(.big) { height: 200px; }
   .water-lead { font-size: 20px; }
