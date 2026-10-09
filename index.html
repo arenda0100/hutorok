@@ -1,453 +1,637 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Хуторок — усадьба для отдыха на природе</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Хуторок - премиальная усадьба для отдыха на природе. Домики, баня, купель, беседка. 35 км от Баранович.">
+  <meta name="keywords" content="отдых на природе, усадьба, домики, баня, купель, Барановичи, Хуторок">
+  <title>Хуторок — премиальная усадьба для отдыха на природе</title>
+
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="images/hero.jpg">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="loader" id="loader">
-  <div class="loader-text">ХУТОРОК</div>
-</div>
-
-<header class="header">
-  <a href="#" class="logo">ХУТОРОК<span>.</span></a>
-  <nav class="nav">
-    <a href="#about">О нас</a>
-    <a href="#gallery">Галерея</a>
-    <a href="#houses">Проживание</a>
-    <a href="#water">На воде</a>
-    <a href="#les">У леса</a>
-    <a href="#prices">Цены</a>
-    <a href="#rules">Условия</a>
-  </nav>
-  <a href="tel:+375297968248" class="phone">+375 29 796-82-48</a>
-</header>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-tag">Усадьба для отдыха на природе</span>
-    <h1>Тишина,<br>природа<br>и <em>уют</em></h1>
-    <p>Отличное место для отдыха от городской суеты. Баня, купель, беседка и дом у воды — 35 км от Баранович.</p>
-    <div class="hero-actions">
-      <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
-      <a href="#gallery" class="btn btn-ghost">Смотреть фото</a>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-text">ХУТОРОК</div>
+      <p class="loader-subtext">загружаем ваш отдых...</p>
     </div>
-    <div class="hero-stats">
-      <div>
-        <strong>26</strong>
-        <span>гостей</span>
-      </div>
-      <div>
-        <strong>4</strong>
-        <span>дома</span>
-      </div>
-      <div>
-        <strong>35 км</strong>
-        <span>от Баранович</span>
+    <div class="hero-float"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <a href="#" class="logo">ХУТОРОК<span>.</span></a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="nav">
+      <a href="#about">О нас</a>
+      <a href="#nature">Природа</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#houses">Проживание</a>
+      <a href="#water">На воде</a>
+      <a href="#prices">Цены</a>
+      <a href="#rules">Условия</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+      <span class="hamburger"></span>
+    </button>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <nav class="nav">
+        <a href="#about">О нас</a>
+        <a href="#nature">Природа</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#houses">Проживание</a>
+        <a href="#water">На воде</a>
+        <a href="#prices">Цены</a>
+        <a href="#rules">Условия</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="contact-info">
+        <a href="tel:+375297968248">+375 29 796-82-48</a>
+        <p>д. Минаки, 40А</p>
       </div>
     </div>
-  </div>
-</section>
+    
+    <a href="tel:+375297968248" class="phone">+375 29 796-82-48</a>
+  </header>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <span>✦ ПРИРОДА ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ДОМИК НА ВОДЕ ✦ ДОМ У ЛЕСА ✦ ОТДЫХ ОТ ГОРОДА ✦</span>
-    <span>✦ ПРИРОДА ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ДОМИК НА ВОДЕ ✦ ДОМ У ЛЕСА ✦ ОТДЫХ ОТ ГОРОДА ✦</span>
-  </div>
-</div>
-
-<section class="section" id="about">
-  <div class="section-head">
-    <span class="section-num">01</span>
-    <h2>О нас</h2>
-    <p>Усадьба, где хочется остаться подольше</p>
-  </div>
-  <div class="about-layout">
-    <div class="about-image">
-      <img src="images/about.jpg" alt="Усадьба Хуторок">
-    </div>
-    <div class="about-text">
-      <p class="about-lead">«Хуторок» — это уютная усадьба в тихой деревне, где городской шум остаётся далеко позади.</p>
-      <p>Четыре дома, баня, купель и беседка на 30 человек. Всё для отдыха большими компаниями и семьями. Природа, свежий воздух, вечерние посиделки у огня.</p>
-      <div class="about-stats">
-        <div>
-          <strong>26</strong>
-          <span>мест всего</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-float"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Усадьба для отдыха на природе</span>
+      <h1>Тишина,<br>природа<br>и <em>уют</em></h1>
+      <p>Отличное место для отдыха от городской суеты. Баня, купель, беседка и дома на природе — 35 км от Баранович.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
+        <a href="#gallery" class="btn btn-secondary">Смотреть фото</a>
+      </div>
+      <!--Hero Features Bar (3 фишки: Wi-Fi, баня, озеро) -->
+      <div class="hero-features">
+        <div class="hero-feature">
+          <span class="hero-feature-icon">📶</span>
+          <span>Wi-Fi</span>
         </div>
-        <div>
-          <strong>4</strong>
-          <span>дома</span>
+        <div class="hero-feature">
+          <span class="hero-feature-icon">🧖</span>
+          <span>Баня</span>
         </div>
-        <div>
-          <strong>250</strong>
-          <span>руб/купель</span>
+        <div class="hero-feature">
+          <span class="hero-feature-icon">🌊</span>
+          <span>Озеро</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-dark" id="gallery">
-  <div class="section-head">
-    <span class="section-num">02</span>
-    <h2>Галерея</h2>
-    <p>Посмотрите, как выглядит усадьба</p>
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>✦ ПРИРОДА ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ДОМИК НА ВОДЕ ✦ ДОМ У ЛЕСА ✦ ОТДЫХ ОТ ГОРОДА ✦</span>
+      <span>✦ ПРИРОДА ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ДОМИК НА ВОДЕ ✦ ДОМ У ЛЕСА ✦ ОТДЫХ ОТ ГОРОДА ✦</span>
+    </div>
   </div>
 
-  <div class="gallery-wrapper">
-    <div class="side-ribbon left">
-      <div class="ribbon-track up">
-        <span>ХУТОРОК ✦ ПРИРОДА ✦ ОТДЫХ ✦ ТИШИНА ✦ УЮТ ✦ ХУТОРОК ✦ ПРИРОДА ✦ ОТДЫХ ✦ ТИШИНА ✦ УЮТ ✦</span>
-        <span>ХУТОРОК ✦ ПРИРОДА ✦ ОТДЫХ ✦ ТИШИНА ✦ УЮТ ✦ ХУТОРОК ✦ ПРИРОДА ✦ ОТДЫХ ✦ ТИШИНА ✦ УЮТ ✦</span>
-      </div>
+  <!-- About Section -->
+  <section class="section pattern-1" id="about">
+    <div class="section-head fade-in-up">
+      <span class="section-num">01</span>
+      <h2>О нас</h2>
+      <p>Усадьба, где хочется остаться подольше</p>
     </div>
-
-    <div class="gallery-grid">
-  <div class="gallery-item big">
-    <img src="images/gallery-1.jpg" alt="Домик на воде" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-2.jpg" alt="Качели" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-4.jpg" alt="Камин" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-5.jpg" alt="Печь" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-6.jpg" alt="Зал с колёсами" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-7.jpg" alt="Зимой" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-8.jpg" alt="Зал с ТВ" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="images/gallery-9.jpg" alt="Дом зимой" loading="lazy">
-  </div>
-</div>
-
-    <div class="side-ribbon right">
-      <div class="ribbon-track down">
-        <span>БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ВОДА ✦ ЛЕС ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ВОДА ✦ ЛЕС ✦</span>
-        <span>БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ВОДА ✦ ЛЕС ✦ БАНЯ ✦ КУПЕЛЬ ✦ БЕСЕДКА ✦ ВОДА ✦ ЛЕС ✦</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="houses">
-  <div class="section-head">
-    <span class="section-num">03</span>
-    <h2>Проживание</h2>
-    <p>Выберите, где хотите остановиться</p>
-  </div>
-  <div class="houses-grid">
-    <div class="house-card">
-      <div class="house-img">
-        <img src="images/house-1.jpg" alt="Первый дом" loading="lazy">
-      </div>
-      <div class="house-body">
-        <div class="house-num">01</div>
-        <h3>Первый дом</h3>
-        <p>Для компании до 10 человек — уютный дом с печью и большим столом.</p>
-        <div class="house-price">500 руб / сутки</div>
-      </div>
-    </div>
-    <div class="house-card">
-      <div class="house-img">
-        <img src="images/house-2.jpg" alt="Второй дом" loading="lazy">
-      </div>
-      <div class="house-body">
-        <div class="house-num">02</div>
-        <h3>Второй дом</h3>
-        <p>Дом для 14 человек — просторный зал, камин, всё для больших праздников.</p>
-        <div class="house-price">550 руб / сутки</div>
-      </div>
-    </div>
-    <div class="house-card">
-      <div class="house-img">
-        <img src="images/room-1.jpg" alt="Комната для двоих" loading="lazy">
-      </div>
-      <div class="house-body">
-        <div class="house-num">03</div>
-        <h3>Комната для двоих</h3>
-        <p>Уютный вариант для пары — тихо, спокойно, всё под рукой.</p>
-        <div class="house-price">100 руб / сутки</div>
-      </div>
-    </div>
-    <div class="house-card featured">
-      <div class="house-img">
-        <img src="images/kupel-1.jpg" alt="Купель" loading="lazy">
-      </div>
-      <div class="house-body">
-        <div class="house-num">04</div>
-        <h3>Купель</h3>
-        <p>Горячая купель на дровах — с гирляндами и видом на лес. Идеально после бани.</p>
-        <div class="house-price">250 руб / сутки</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-dark" id="water">
-  <div class="section-head">
-    <span class="section-num">04</span>
-    <h2>Домик на воде</h2>
-    <p>Романтика на берегу — прямо над водой</p>
-  </div>
-  <div class="water-layout">
-    <div class="water-gallery">
-      <div class="water-img big">
-        <img src="images/water-1.jpg" alt="Домик на воде" loading="lazy">
-      </div>
-      <div class="water-img">
-        <img src="images/water-2.jpg" alt="Домик на воде с лодкой" loading="lazy">
-      </div>
-    </div>
-    <div class="water-text">
-      <p class="water-lead">Отдельный домик прямо над водой — для тех, кто хочет тишины и романтики.</p>
-      <p>Просыпаетесь под шум воды, завтракаете на террасе с видом на лес, вечером — лодка, костёр и звёзды. Полное уединение вдали от города.</p>
-      <div class="water-features">
-        <div>
-          <span class="water-icon">🌊</span>
-          <span>Прямо на воде</span>
-        </div>
-        <div>
-          <span class="water-icon">🛏️</span>
-          <span>Для двоих</span>
-        </div>
-        <div>
-          <span class="water-icon">🚣</span>
-          <span>Лодка рядом</span>
+    <div class="about-layout">
+      <div class="about-text fade-in-right">
+        <p class="about-lead">«Хуторок» — это уютная усадьба в тихой деревне, где городской шум остаётся далеко позади.</p>
+        <p>Несколько домов, баня, купель и беседка на 30 человек. Всё для отдыха большими компаниями и семьями. Природа, свежий воздух, вечерние посиделки у огня.</p>
+        <div class="about-stats">
+          <div>
+            <strong>26</strong>
+            <span>мест всего</span>
+          </div>
+          <div>
+            <strong>5</strong>
+            <span>домов</span>
+          </div>
+          <div>
+            <strong>35 км</strong>
+            <span>от Баранович</span>
+          </div>
         </div>
       </div>
-      <div class="water-price">
-        <span class="water-price-num">200</span>
-        <span class="water-price-cur">руб / сутки</span>
-      </div>
-      <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="les">
-  <div class="section-head">
-    <span class="section-num">05</span>
-    <h2>Дом у леса</h2>
-    <p>Отдельная усадьба с собственным въездом</p>
-  </div>
-  <div class="water-layout water-layout-reverse">
-    <div class="water-text">
-      <p class="water-lead">Собственный дом у самого леса — с террасой, перголой и большой лужайкой.</p>
-      <p>Полностью отдельная усадьба со своим въездом, воротами и двором. Идеально для семей с детьми: рядом лес, свежий воздух, простор для игр. В доме — всё для комфортного отдыха.</p>
-      <div class="water-features">
-        <div>
-          <span class="water-icon">🌲</span>
-          <span>У самого леса</span>
-        </div>
-        <div>
-          <span class="water-icon">🏡</span>
-          <span>Свой двор</span>
-        </div>
-        <div>
-          <span class="water-icon">🅿️</span>
-          <span>Свой въезд</span>
+      <div class="about-image fade-in-left">
+        <div class="about-image-wrapper">
+          <img src="images/about.jpg" alt="Усадьба Хуторок" loading="lazy">
         </div>
       </div>
-      <div class="water-price">
-        <span class="water-price-num">600</span>
-        <span class="water-price-cur">руб / сутки</span>
+    </div>
+  </section>
+
+  <!-- Nature Section -->
+  <section class="nature-section" id="nature">
+    <div class="nature-bg"></div>
+    <div class="nature-content fade-in-up">
+      <span class="nature-tag">Наши преимущества</span>
+      <h2>Погрузитесь в атмосферу природы</h2>
+      <p>Уникальное место, где можно отдохнуть от городской суеты и насладиться тишиной, чистым воздухом и красивыми пейзажами.</p>
+      <div class="nature-features">
+        <div class="nature-feature">Чистый воздух</div>
+        <div class="nature-feature">Тишина и покой</div>
+        <div class="nature-feature">Красивая природа</div>
+        <div class="nature-feature">Экология</div>
       </div>
-      <button class="btn btn-primary" onclick="openModal()">Забронировать</button>
     </div>
-    <div class="water-gallery">
-      <div class="water-img big">
-        <img src="images/les-1.jpg" alt="Дом у леса" loading="lazy">
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section section-dark" id="gallery">
+    <div class="section-head fade-in-up">
+      <span class="section-num">02</span>
+      <h2>Галерея</h2>
+      <p>Посмотрите, как выглядит усадьба</p>
+    </div>
+    <div class="gallery-wrapper">
+      <div class="gallery-grid fade-in-up">
+        <!-- Main Gallery Images - ровно 9 как в ТЗ -->
+        <div class="gallery-item" data-caption="Домик на воде">
+          <img src="images/gallery-1.jpg" alt="Домик на воде" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Качели">
+          <img src="images/gallery-2.jpg" alt="Качели" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Камин">
+          <img src="images/gallery-3.jpg" alt="Камин" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Печь">
+          <img src="images/gallery-4.jpg" alt="Печь" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Зал с колёсами">
+          <img src="images/gallery-5.jpg" alt="Зал с колёсами" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Зимой">
+          <img src="images/gallery-6.jpg" alt="Зимой" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Природа">
+          <img src="images/gallery-7.jpg" alt="Природа" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Отдых">
+          <img src="images/gallery-8.jpg" alt="Отдых" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Усадьба">
+          <img src="images/gallery-9.jpg" alt="Усадьба" loading="lazy">
+        </div>
+        <!-- Additional images from user's list -->
+        <div class="gallery-item" data-caption="Арка на усадьбе">
+          <img src="images/arch.jpg" alt="Арка на усадьбе" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Качели на усадьбе">
+          <img src="images/swing.jpg" alt="Качели на усадьбе" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Днём на усадьбе">
+          <img src="images/day.jpg" alt="Днём на усадьбе" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Ночью на усадьбе">
+          <img src="images/night.jpg" alt="Ночью на усадьбе" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Дом зимой">
+          <img src="images/winter-house.jpg" alt="Дом зимой" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Двор зимой">
+          <img src="images/winter-yard.jpg" alt="Двор зимой" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Купель зимой">
+          <img src="images/winter-tub.jpg" alt="Купель зимой" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Лес около усадьбы">
+          <img src="images/les-2.jpg" alt="Лес около усадьбы" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Лесная дорожка">
+          <img src="images/les-3.jpg" alt="Лесная дорожка" loading="lazy">
+        </div>
+        <div class="gallery-item" data-caption="Усадьба Хуторок">
+          <img src="images/g9.jpg" alt="Усадьба Хуторок" loading="lazy">
+        </div>
       </div>
-      <div class="water-img">
-        <img src="images/les-2.jpg" alt="Ворота дома у леса" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Houses Section -->
+  <section class="section pattern-2 houses-section" id="houses">
+    <div class="section-head fade-in-up">
+      <span class="section-num">03</span>
+      <h2>Проживание</h2>
+      <p>Выберите, где хотите остановиться</p>
+    </div>
+    <div class="houses-grid">
+      <!-- Дом 1 -->
+      <div class="house-card fade-in-up">
+        <div class="house-img">
+          <img src="images/house-1.jpg" alt="Первый дом" loading="lazy">
+        </div>
+        <div class="house-thumbs">
+          <img src="images/house-1-1.jpg" alt="Первый дом - вид 1" loading="lazy">
+          <img src="images/house-1-2.jpg" alt="Первый дом - вид 2" loading="lazy">
+          <img src="images/house-1-3.jpg" alt="Первый дом - вид 3" loading="lazy">
+          <img src="images/house-1-4.jpg" alt="Первый дом - вид 4" loading="lazy">
+          <img src="images/house-1-5.jpg" alt="Первый дом - вид 5" loading="lazy">
+        </div>
+        <div class="house-body">
+          <div class="house-num">01</div>
+          <h3>Первый дом</h3>
+          <p>Для компании до 10 человек — уютный дом с печью и большим столом.</p>
+          <div class="house-features">
+            <div class="house-feature">🛏️ 10 мест</div>
+            <div class="house-feature">🔥 Печь</div>
+            <div class="house-feature">🍽️ Большой стол</div>
+            <div class="house-feature">🌲 Вид на лес</div>
+          </div>
+          <div class="house-price">500 руб / сутки</div>
+          <button class="btn btn-outline" onclick="openModal()">Подробнее</button>
+        </div>
+      </div>
+      
+      <!-- Дом 2 -->
+      <div class="house-card fade-in-up">
+        <div class="house-img">
+          <img src="images/house-2.jpg" alt="Второй дом" loading="lazy">
+        </div>
+        <div class="house-thumbs">
+          <img src="images/house-2-1.jpg" alt="Второй дом - вид 1" loading="lazy">
+          <img src="images/house-2-2.jpg" alt="Второй дом - вид 2" loading="lazy">
+          <img src="images/house-2-3.jpg" alt="Второй дом - вид 3" loading="lazy">
+          <img src="images/house-2-4.jpg" alt="Второй дом - вид 4" loading="lazy">
+          <img src="images/house-2-5.jpg" alt="Второй дом - вид 5" loading="lazy">
+          <img src="images/house-2-6.jpg" alt="Второй дом - вид 6" loading="lazy">
+          <img src="images/house-2-7.jpg" alt="Второй дом - вид 7" loading="lazy">
+        </div>
+        <div class="house-body">
+          <div class="house-num">02</div>
+          <h3>Второй дом</h3>
+          <p>Дом для 14 человек — просторный зал, камин, всё для больших праздников.</p>
+          <div class="house-features">
+            <div class="house-feature">🛏️ 14 мест</div>
+            <div class="house-feature">🔥 Камин</div>
+            <div class="house-feature">🎉 Для праздников</div>
+            <div class="house-feature">🌳 Своя территория</div>
+          </div>
+          <div class="house-price">550 руб / сутки</div>
+          <button class="btn btn-outline" onclick="openModal()">Подробнее</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-dark" id="prices">
-  <div class="section-head">
-    <span class="section-num">06</span>
-    <h2>Цены</h2>
-    <p>Прозрачные условия без скрытых платежей</p>
-  </div>
-  <div class="prices">
-    <div class="price-card">
-      <div class="price-badge">Первый дом</div>
-      <div class="price-icon">🏡</div>
-      <h3>До 10 человек</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">500</span><span class="price-cur">руб/сутки</span></div>
+  <!-- Water Section (Домик на воде, Купель, Баня) -->
+  <section class="section section-dark" id="water">
+    <div class="section-head fade-in-up">
+      <span class="section-num">04</span>
+      <h2>На воде и в бане</h2>
+      <p>Романтика, оздоровление и расслабление</p>
     </div>
-    <div class="price-card featured">
-      <div class="price-badge">Второй дом</div>
-      <div class="price-icon">🏠</div>
-      <h3>До 14 человек</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">550</span><span class="price-cur">руб/сутки</span></div>
-    </div>
-    <div class="price-card">
-      <div class="price-badge">Комната</div>
-      <div class="price-icon">🛏️</div>
-      <h3>Для двоих</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">100</span><span class="price-cur">руб/сутки</span></div>
-    </div>
-    <div class="price-card">
-      <div class="price-badge">На воде</div>
-      <div class="price-icon">🌊</div>
-      <h3>Домик на воде</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">200</span><span class="price-cur">руб/сутки</span></div>
-    </div>
-    <div class="price-card">
-      <div class="price-badge">У леса</div>
-      <div class="price-icon">🌲</div>
-      <h3>Дом у леса</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">600</span><span class="price-cur">руб/сутки</span></div>
-    </div>
-    <div class="price-card">
-      <div class="price-badge">Купель</div>
-      <div class="price-icon">♨️</div>
-      <h3>Купель на сутки</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">250</span><span class="price-cur">руб/сутки</span></div>
-    </div>
-    <div class="price-card">
-      <div class="price-badge">Баня</div>
-      <div class="price-icon">🔥</div>
-      <h3>Без ограничения</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">120</span><span class="price-cur">руб</span></div>
+    
+    <!-- 3 карточки в ряд как в ТЗ -->
+    <div class="water-cards">
+      <!-- Домик на воде -->
+      <div class="water-card fade-in-up">
+        <div class="water-img big">
+          <img src="images/water-1.jpg" alt="Домик на воде" loading="lazy">
+        </div>
+        <div class="water-thumbs">
+          <img src="images/water-2.jpg" alt="Домик на воде с лодкой" loading="lazy">
+          <img src="images/water-house.jpg" alt="Вид на домик на воде" loading="lazy">
+        </div>
+        <div class="water-content">
+          <h3>Домик на воде</h3>
+          <p>Отдельный домик прямо над водой — для тех, кто хочет тишины и романтики.</p>
+          <div class="water-features">
+            <div class="water-feature">🌊 Прямо на воде</div>
+            <div class="water-feature">🛏️ Для двоих</div>
+            <div class="water-feature">🚣 Лодка рядом</div>
+          </div>
+          <div class="water-price">200 руб / сутки</div>
+          <button class="btn btn-gold" onclick="openModal()">Забронировать</button>
+        </div>
       </div>
-    <div class="price-card">
-      <div class="price-badge">Беседка</div>
-      <div class="price-icon">🍽️</div>
-      <h3>До 30 человек</h3>
-      <div class="price-line"></div>
-      <div class="price"><span class="price-num">100</span><span class="price-cur">руб</span></div>
-      <p>С посудой — 200 руб</p>
+      
+      <!-- Купель -->
+      <div class="water-card fade-in-up">
+        <div class="water-img big">
+          <img src="images/kupel-1.jpg" alt="Купель" loading="lazy">
+        </div>
+        <div class="water-thumbs">
+          <img src="images/kupel-2.jpg" alt="Купель на усадьбе" loading="lazy">
+          <img src="images/tub-night.jpg" alt="Купель ночью" loading="lazy">
+        </div>
+        <div class="water-content">
+          <h3>Купель</h3>
+          <p>Купель с подогревом воды — для оздоровления и расслабления.</p>
+          <div class="water-features">
+            <div class="water-feature">♨️ С подогревом</div>
+            <div class="water-feature">💆 На 6 человек</div>
+            <div class="water-feature">🌡️ Круглый год</div>
+          </div>
+          <div class="water-price">250 руб / сутки</div>
+          <button class="btn btn-gold" onclick="openModal()">Забронировать</button>
+        </div>
+      </div>
+      
+      <!-- Баня -->
+      <div class="water-card fade-in-up">
+        <div class="water-img big">
+          <img src="images/banya.jpg" alt="Баня" loading="lazy">
+        </div>
+        <div class="water-thumbs">
+          <img src="images/gallery-3.jpg" alt="Камин в бане" loading="lazy">
+          <img src="images/gallery-4.jpg" alt="Печь в бане" loading="lazy">
+        </div>
+        <div class="water-content">
+          <h3>Баня</h3>
+          <p>Просторная баня с предбанником и душевой. Топится дровами.</p>
+          <div class="water-features">
+            <div class="water-feature">🔥 На дровах</div>
+            <div class="water-feature">👥 До 10 человек</div>
+            <div class="water-feature">🌲 Дрова включены</div>
+          </div>
+          <div class="water-price">120 руб</div>
+          <button class="btn btn-gold" onclick="openModal()">Забронировать</button>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="rules">
-  <div class="section-head">
-    <span class="section-num">07</span>
-    <h2>Условия</h2>
-    <p>Пожалуйста, ознакомьтесь перед бронированием</p>
-  </div>
-  <div class="rules-grid">
-    <div class="rule">
-      <span class="rule-icon">👥</span>
-      <h4>Вместимость</h4>
-      <p>Усадьба рассчитана на 26 человек</p>
+  <!-- Rooms Section -->
+  <section class="section pattern-1 rooms-section" id="rooms">
+    <div class="section-head fade-in-up">
+      <span class="section-num">05</span>
+      <h2>Комнаты</h2>
+      <p>Уютные варианты для отдыха</p>
     </div>
-    <div class="rule">
-      <span class="rule-icon">💳</span>
-      <h4>Предоплата</h4>
-      <p>200 руб при бронировании всей усадьбы</p>
+    <div class="rooms-grid">
+      <div class="room-card fade-in-up">
+        <div class="room-img">
+          <img src="images/room-1.jpg" alt="Комната для двоих" loading="lazy">
+        </div>
+        <div class="room-content">
+          <h3>Комната для двоих</h3>
+          <p>Уютный вариант для пары — тихо, спокойно, всё под рукой.</p>
+          <div class="room-price">100 руб / сутки</div>
+          <button class="btn btn-outline" onclick="openModal()">Забронировать</button>
+        </div>
+      </div>
+      
+      <div class="room-card fade-in-up">
+        <div class="room-img">
+          <img src="images/bedroom.jpg" alt="Спальня" loading="lazy">
+        </div>
+        <div class="room-content">
+          <h3>Спальня</h3>
+          <p>Просторная спальня с удобной кроватью и видом на природу.</p>
+          <div class="room-price">120 руб / сутки</div>
+          <button class="btn btn-outline" onclick="openModal()">Забронировать</button>
+        </div>
+      </div>
     </div>
-    <div class="rule">
-      <span class="rule-icon">🕒</span>
-      <h4>Заезд</h4>
-      <p>С 15:00</p>
-    </div>
-    <div class="rule">
-      <span class="rule-icon">🕛</span>
-      <h4>Выезд</h4>
-      <p>До 12:00</p>
-    </div>
-    <div class="rule">
-      <span class="rule-icon">🚫</span>
-      <h4>Питомцы</h4>
-      <p>К сожалению, привозить нельзя</p>
-    </div>
-    <div class="rule">
-      <span class="rule-icon">📅</span>
-      <h4>Бронь</h4>
-      <p>Дата считается забронированной только после внесения предоплаты</p>
-    </div>
-  </div>
-  <div class="pay-note">
-    <p><strong>Оплата:</strong> уточняйте у администратора при бронировании</p>
-  </div>
-</section>
+  </section>
 
-<section class="section section-dark" id="contacts">
-  <div class="section-head">
-    <span class="section-num">08</span>
-    <h2>Контакты</h2>
-    <p>Свяжитесь с нами любым удобным способом</p>
-  </div>
-  <div class="contacts">
-    <div class="contact">
-      <span class="contact-label">Телефон</span>
-      <a href="tel:+375297968248">+375 29 796-82-48</a>
+  <!-- Prices Section -->
+  <section class="section" id="prices">
+    <div class="section-head fade-in-up">
+      <span class="section-num">06</span>
+      <h2>Цены</h2>
+      <p>Прозрачные условия без скрытых платежей</p>
     </div>
-    <div class="contact">
-      <span class="contact-label">Адрес</span>
-      <p>Гродненская обл., Кореличский р-н, д. Минаки, 40А</p>
+    <div class="prices">
+      <!-- Houses -->
+      <div class="price-card fade-in-up">
+        <div class="price-badge">Первый дом</div>
+        <div class="price-icon">🏡</div>
+        <h3>До 10 человек</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">500</span><span class="price-cur">руб/сутки</span></div>
+      </div>
+      
+      <div class="price-card featured fade-in-up">
+        <div class="price-badge">Второй дом</div>
+        <div class="price-icon">🏠</div>
+        <h3>До 14 человек</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">550</span><span class="price-cur">руб/сутки</span></div>
+      </div>
+      
+      <div class="price-card fade-in-up">
+        <div class="price-badge">Комната</div>
+        <div class="price-icon">🛏️</div>
+        <h3>Для двоих</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">100</span><span class="price-cur">руб/сутки</span></div>
+      </div>
+      
+      <div class="price-card fade-in-up">
+        <div class="price-badge">На воде</div>
+        <div class="price-icon">🌊</div>
+        <h3>Домик на воде</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">200</span><span class="price-cur">руб/сутки</span></div>
+      </div>
+      
+      <!-- Additional Services -->
+      <div class="price-card fade-in-up">
+        <div class="price-badge">Купель</div>
+        <div class="price-icon">♨️</div>
+        <h3>Купель на сутки</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">250</span><span class="price-cur">руб/сутки</span></div>
+      </div>
+      
+      <div class="price-card fade-in-up">
+        <div class="price-badge">Баня</div>
+        <div class="price-icon">🔥</div>
+        <h3>Без ограничения</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">120</span><span class="price-cur">руб</span></div>
+      </div>
+      
+      <div class="price-card fade-in-up">
+        <div class="price-badge">Беседка</div>
+        <div class="price-icon">🍽️</div>
+        <h3>До 30 человек</h3>
+        <div class="price-line"></div>
+        <div class="price"><span class="price-num">100</span><span class="price-cur">руб</span></div>
+        <p>С посудой — 200 руб</p>
+      </div>
     </div>
-    <div class="contact">
-      <span class="contact-label">Расстояние</span>
-      <p>35 км от Баранович</p>
-    </div>
-    <div class="contact">
-      <span class="contact-label">Заявки</span>
-      <p>Обработка в течение дня</p>
-    </div>
-  </div>
-  <div class="cta">
-    <button class="btn btn-primary" onclick="openModal()">Оставить заявку</button>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-logo">ХУТОРОК<span>.</span></div>
-    <p class="footer-script">отдых от городской суеты</p>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Хуторок. Все права защищены.</p>
-    <p>д. Минаки, 40А</p>
-  </div>
-</footer>
+  <!-- Rules Section -->
+  <section class="section section-dark" id="rules">
+    <div class="section-head fade-in-up">
+      <span class="section-num">07</span>
+      <h2>Условия</h2>
+      <p>Пожалуйста, ознакомьтесь перед бронированием</p>
+    </div>
+    <div class="rules-grid">
+      <div class="rule fade-in-up">
+        <span class="rule-icon">👥</span>
+        <h4>Вместимость</h4>
+        <p>Усадьба рассчитана на 26 человек</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">💳</span>
+        <h4>Предоплата</h4>
+        <p>200 руб при бронировании всей усадьбы</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">🕒</span>
+        <h4>Заезд</h4>
+        <p>С 15:00</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">🕛</span>
+        <h4>Выезд</h4>
+        <p>До 12:00</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">🚫</span>
+        <h4>Питомцы</h4>
+        <p>К сожалению, привозить нельзя</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">📅</span>
+        <h4>Бронь</h4>
+        <p>Дата считается забронированной только после внесения предоплаты</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">📞</span>
+        <h4>Связь</h4>
+        <p>Оплата и условия уточняйте у администратора</p>
+      </div>
+      <div class="rule fade-in-up">
+        <span class="rule-icon">💼</span>
+        <h4>Чистота</h4>
+        <p>Уборка включена в стоимость</p>
+      </div>
+    </div>
+    <div class="pay-note fade-in-up">
+      <p><strong>Оплата:</strong> уточняйте у администратора при бронировании</p>
+    </div>
+  </section>
 
-<div class="modal" id="modal">
-  <div class="modal-bg" onclick="closeModal()"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <span class="modal-tag">Бронирование</span>
-    <h2>Оставьте заявку</h2>
-    <p>Мы свяжемся с вами в течение дня</p>
-    <form onsubmit="sendToTelegram(event);">
-      <input type="text" id="tg-name" placeholder="Ваше имя" required>
-      <input type="tel" id="tg-phone" placeholder="Телефон" required>
-      <textarea id="tg-comment" placeholder="Даты, количество гостей, что интересует (дом, баня и т.д.)" rows="4"></textarea>
-      <button type="submit" class="btn btn-primary">Отправить заявку</button>
-    </form>
-  </div>
-</div>
+  <!-- Contacts Section -->
+  <section class="section" id="contacts">
+    <div class="section-head fade-in-up">
+      <span class="section-num">08</span>
+      <h2>Контакты</h2>
+      <p>Свяжитесь с нами любым удобным способом</p>
+    </div>
+    <div class="contacts">
+      <div class="contact fade-in-up">
+        <span class="contact-label">Телефон</span>
+        <a href="tel:+375297968248">+375 29 796-82-48</a>
+      </div>
+      <div class="contact fade-in-up">
+        <span class="contact-label">Адрес</span>
+        <p>Гродненская обл., Кореличский р-н, д. Минаки, 40А</p>
+      </div>
+      <div class="contact fade-in-up">
+        <span class="contact-label">Расстояние</span>
+        <p>35 км от Баранович</p>
+      </div>
+      <div class="contact fade-in-up">
+        <span class="contact-label">Заявки</span>
+        <p>Обработка в течение дня</p>
+      </div>
+    </div>
+    <div class="cta fade-in-up">
+      <button class="btn btn-primary" onclick="openModal()">Оставить заявку</button>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">ХУТОРОК<span>.</span></div>
+      <p class="footer-script">отдых от городской суеты</p>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Навигация</h4>
+        <a href="#about">О нас</a>
+        <a href="#nature">Природа</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#houses">Проживание</a>
+        <a href="#water">На воде</a>
+        <a href="#prices">Цены</a>
+        <a href="#rules">Условия</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <div class="footer-column">
+        <h4>Услуги</h4>
+        <a href="#water">Домик на воде</a>
+        <a href="#water">Купель</a>
+        <a href="#water">Баня</a>
+        <a href="#houses">Домики</a>
+        <a href="#rooms">Комнаты</a>
+        <a href="#prices">Беседка</a>
+      </div>
+      <div class="footer-column">
+        <h4>Контакты</h4>
+        <a href="tel:+375297968248">+375 29 796-82-48</a>
+        <p>д. Минаки, 40А</p>
+        <p>35 км от Баранович</p>
+      </div>
+      <div class="footer-column">
+        <h4>Социальные сети</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Viber">📱</a>
+          <a href="https://wa.me/375297968248" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Хуторок. Все права защищены.</p>
+      <p>Создано с любовью к природе</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/375297968248" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Modal Window -->
+  <div class="modal" id="modal">
+    <div class="modal-bg" onclick="closeModal()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <span class="modal-tag">Бронирование</span>
+      <h2>Оставьте заявку</h2>
+      <p>Мы свяжемся с вами в течение дня</p>
+      <form onsubmit="sendToTelegram(event);">
+        <input type="text" id="tg-name" placeholder="Ваше имя" required>
+        <input type="tel" id="tg-phone" placeholder="Телефон" required>
+        <textarea id="tg-comment" placeholder="Даты, количество гостей, что интересует (дом, баня и т.д.)" rows="4"></textarea>
+        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
